@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>dev.bjw-s.alfred-vscode-workspaces</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>16107B3E-DF43-4B1F-AEA4-3062D06A33AE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>86184322-9BB1-45BC-B3CE-C2EDDC5B3D43</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Bᴇʀɴᴅ Sᴄʜᴏʀɢᴇʀs</string>
+	<key>description</key>
+	<string>Recursively find VS Code workspaces in a folder</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>VS Code Workspaces</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>vs</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Searching workspaces...</string>
+				<key>script</key>
+				<string>/usr/bin/python3 workspaces.py --folder "$searchPath" --query "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string>workspaces.py</string>
+				<key>subtext</key>
+				<string>In {var:searchPath}</string>
+				<key>title</key>
+				<string>Search VSCode workspaces</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>16107B3E-DF43-4B1F-AEA4-3062D06A33AE</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>openwith</key>
+				<string></string>
+				<key>sourcefile</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>86184322-9BB1-45BC-B3CE-C2EDDC5B3D43</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>This workflow can be used to recursively find VS Code workspaces (files ending with `.code-workspace`) in a folder.
+
+It requires the `searchPath` variable to be set to the folder where you store your workspace files.</string>
+	<key>uidata</key>
+	<dict>
+		<key>16107B3E-DF43-4B1F-AEA4-3062D06A33AE</key>
+		<dict>
+			<key>xpos</key>
+			<integer>155</integer>
+			<key>ypos</key>
+			<integer>220</integer>
+		</dict>
+		<key>86184322-9BB1-45BC-B3CE-C2EDDC5B3D43</key>
+		<dict>
+			<key>xpos</key>
+			<integer>320</integer>
+			<key>ypos</key>
+			<integer>220</integer>
+		</dict>
+	</dict>
+	<key>variables</key>
+	<dict>
+		<key>searchPath</key>
+		<string></string>
+	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>searchPath</string>
+	</array>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/bjw-s/alfred-vscode-workspaces</string>
+</dict>
+</plist>
